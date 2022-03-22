@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "_bnotes",
+  "version": "1.0",
+
+  "description": "Simple note taking application",
+
+  "icons": {
+    "48": "assets/img/logo.ico"
+  },
+  "browser_action": {
+    "default_popup": "src/bnotes.html"
+  },
+  "permissions": ["storage", "clipboardWrite", "clipboardRead"],
+  "content_security_policy": "script-src 'self' https://kit.fontawesome.com/1cdc6be815.js https://cdn.jsdelivr.net/npm/sweetalert2@11; object-src 'self'"
+}
