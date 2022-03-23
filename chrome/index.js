@@ -44,14 +44,14 @@ note_container.addEventListener('dragover', e => {
 
 
 window.onload = () => {
-    if (browser != undefined) {
-        browser.storage.local.get("temp")
-        .then( results => {
+    if (chrome != undefined) {
+        chrome.storage.local.get("temp")
+        .then(results => {
         if (results.temp == undefined) {
-            browser.storage.local.get("Notes")
+            chrome.storage.local.get("Notes")
             .then( results => {
                 if (results.Notes == undefined) {
-                    browser.storage.local.set({Notes: ""})
+                    chrome.storage.local.set({Notes: ""})
                 }
             })
         }
@@ -69,12 +69,12 @@ function saveTemp(e=null) {
     for (i=0;i<arr.length;i++) {
         tmp.push(arr[i].value)
     }
-    browser.storage.local.set({temp: tmp})
+    chrome.storage.local.set({temp: tmp})
 }
 
 
 function loadTemp() {
-    browser.storage.local.get('temp')
+    chrome.storage.local.get('temp')
     .then(results => { 
         for (i=0;i<results.temp.length;i++) {
         composeNote(text=results.temp[i])
@@ -167,9 +167,9 @@ function composeCollectionMenu(collection=null, options=config) {
         repr_container.style.justifyContent = 'space-between'
 
 
-        browser.storage.local.get('Archive')
+        chrome.storage.local.get('Archive')
         .then(results => {
-            if (Object.keys(results.Archive).length > 0) {
+            if (Object.keys(results.Archive) != undefined && Object.keys(results.Archive).length > 0) {
                 for (let [key, values] of Object.entries(results.Archive)) {
                     let button = document.createElement('button')
                     button.innerText = key
@@ -332,12 +332,12 @@ function addBlankNote() {
 
 
 function noteFromClipboard() {
+    console.log('j')
     navigator.clipboard.readText()
-    .then(results => {
-        if (results) {
-            composeNote(text=results)
-            saveTemp()
-        }
+    .then(() => {
+        console.log('h')
+        composeNote(text=results)
+        saveTemp()
     })
     .catch(e=> console.log(e))
 };
@@ -362,7 +362,7 @@ function copyToClipboard(textToCopy) {
 
 
 function appendToArchive(data) {
-    browser.storage.local.get('Archive')
+    chrome.storage.local.get('Archive')
     .then(results => {
         let hold = results
         let copy = [...data]
@@ -383,7 +383,7 @@ function appendToArchive(data) {
                 input: 'text',
                 inputValue: `Collection ${accum++}`,
                 width: '250px',
-                height: '200px',
+                /* height: '200px', */
                 showCloseButton: true,
                 showCancelButton: true,
                 inputValidator: (value) => {
@@ -399,11 +399,11 @@ function appendToArchive(data) {
                         if (hold.Archive != undefined) {
                             let res = hold.Archive
                             res[name] = copy
-                            browser.storage.local.set({Archive: res})
+                            chrome.storage.local.set({Archive: res})
                             .then(showArchive())
                         }
                         else {
-                            browser.storage.local.set({Archive: final})
+                            chrome.storage.local.set({Archive: final})
                             .then(showArchive())
                     }}
                     else {
@@ -416,7 +416,7 @@ function appendToArchive(data) {
 
 
 function showArchive(key=null) {
-    browser.storage.local.get('Archive')
+    chrome.storage.local.get('Archive')
     .then(results => {
         if (results.Archive) {
             if (key != null) {
@@ -433,7 +433,7 @@ function showArchive(key=null) {
 
 
 function appendToStorage(data) {
-    browser.storage.local.get('Notes')
+    chrome.storage.local.get('Notes')
     .then(results => {
         if (results.Notes != undefined && results.Notes != '') {
             let arr = Array.from(results.Notes)
@@ -444,14 +444,14 @@ function appendToStorage(data) {
             /* if (s.length > 0) {
                 appendToArchive(s)
             } */
-            browser.storage.local.set({Notes: s})
+            chrome.storage.local.set({Notes: s})
         } 
         else {
             let s = Array.from(data)
             /* if (s.length > 0) {
                 appendToArchive(s)
             } */
-            browser.storage.local.set({Notes: s})
+            chrome.storage.local.set({Notes: s})
         }
     })
     .catch(e=> console.log(e))
@@ -470,7 +470,7 @@ function saveNotes() {
 
 
 function loadNotes() {
-    browser.storage.local.get('Notes')
+    chrome.storage.local.get('Notes')
     .then(results => { 
         if (results.Notes.length > 0) {
             deleteNotes()
@@ -479,7 +479,7 @@ function loadNotes() {
             }
         }
     })
-    .catch(e=> Swal.fire({
+    .catch(e=> fire({
         top: 0,
         title: null,
         text: `${e}`
@@ -488,8 +488,8 @@ function loadNotes() {
 
 
 function clearAll() {
-    browser.storage.local.remove('Notes')
-    browser.storage.local.remove('temp')
+    chrome.storage.local.remove('Notes')
+    chrome.storage.local.remove('temp')
     deleteNotes()
 }
 
@@ -502,7 +502,7 @@ function deleteArchive() {
     })
     .then(results => {
         if (results.isConfirmed) {
-            browser.storage.local.remove('Archive')
+            chrome.storage.local.remove('Archive')
             let d = document.getElementById('collection-menu')
             d.remove()
         }
