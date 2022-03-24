@@ -267,7 +267,6 @@ function composeCollectionMenu(collection=null, options=config) {
         requestAnimationFrame(function(){
             container.classList.remove('hidden')
         })
-        //console.log(getOffset(load_button).left, getOffset(load_button).top)
         return container
     }
     else {
@@ -330,16 +329,42 @@ function addBlankNote() {
     }
 };
 
+/* async function noteFromClipboard(e=null) {
+    console.log('made it here')
+    if (e) {
+        e.preventDefault()
+    }
+    if (navigator.clipboard) {
+        try {
+            const res = await navigator.clipboard.readText();
+            return console.log(res);
+        } catch (e_1) {
+            return console.log(e_1);
+        }
+    }
+} */
 
-function noteFromClipboard() {
+function getClipboard() {
+    var pasteTarget = document.createElement("div");
+    pasteTarget.contentEditable = true;
+    var actElem = document.activeElement.appendChild(pasteTarget).parentNode;
+    pasteTarget.focus();
+    document.execCommand("Paste", null, null);
+    var paste = pasteTarget.innerText;
+    actElem.removeChild(pasteTarget);
+    return paste;
+};
+
+function pasteFromClipboard() {
+    if (navigator.clipboard) {
+
+    }
+}
+
+function noteFromClipboard(e=null) {
     console.log('j')
-    navigator.clipboard.readText()
-    .then(() => {
-        console.log('h')
-        composeNote(text=results)
-        saveTemp()
-    })
-    .catch(e=> console.log(e))
+    console.log(window.isSecureContext)
+    composeNote(text=getClipboard())
 };
 
 

@@ -194,7 +194,7 @@ function composeCollectionMenu(collection=null, options=config) {
 
             for (i=0;i<list.length;i++) {
                 let tar = list[i]
-                let text = tar.innerText || tar.innerHTML
+                let text = tar.innerText
                 
                 tar.SetHeightWidth = function(target) {
                     target.style.width = 0
