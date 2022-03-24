@@ -142,8 +142,10 @@ function composeCollectionMenu(collection=null, options=config) {
     let container = document.createElement('div')
     let repr_container = document.createElement('div')
     let button_container = document.createElement('section')
-    let exit_button = document.createElement('i')
-    let delete_button = document.createElement('i')
+    let exit_button = document.createElement('button')
+    let delete_button = document.createElement('button')
+    let exit_button_icon = document.createElement('i')
+    let delete_button_icon = document.createElement('i')
     let text_input = document.createElement('input')
 
     if (!document.getElementById('collection-menu')) {
@@ -240,18 +242,20 @@ function composeCollectionMenu(collection=null, options=config) {
             }
         }, false);
 
-        exit_button.classList.add('fa-solid')
-        exit_button.classList.add('fa-x')
+        exit_button_icon.classList.add('fa-solid')
+        exit_button_icon.classList.add('fa-x')
         exit_button.classList.add('collection-menu-exit-button')
         exit_button.classList.add('create-button')
+        exit_button.appendChild(exit_button_icon)
         exit_button.addEventListener('click', function () {
             container.remove()
         }, false)
 
-        delete_button.classList.add('fa-solid')
-        delete_button.classList.add('fa-dumpster')
+        delete_button_icon.classList.add('fa-solid')
+        delete_button_icon.classList.add('fa-dumpster')
         delete_button.classList.add('create-button')
         delete_button.classList.add('collection-menu-delete-button')
+        delete_button.appendChild(delete_button_icon)
         delete_button.addEventListener('click', deleteArchive, false)
 
         button_container.classList.add('collection-menu-button-container')
