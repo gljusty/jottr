@@ -350,6 +350,7 @@ function noteFromClipboard(e=null) {
     console.log('j')
     console.log(window.isSecureContext)
     composeNote(text=getClipboard())
+    saveTemp()
 };
 
 
