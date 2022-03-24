@@ -176,7 +176,7 @@ function composeCollectionMenu(collection=null, options=config) {
                     let button = document.createElement('button')
                     button.innerText = key
                     button.classList.add('collection-menu-button')
-                    button.setAttribute('draggable', true)
+                    //button.setAttribute('draggable', true)
                     button.addEventListener('click', function() {
                         deleteNotes()
                         composeCollection(values, options=options)

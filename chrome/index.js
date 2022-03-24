@@ -333,20 +333,6 @@ function addBlankNote() {
     }
 };
 
-/* async function noteFromClipboard(e=null) {
-    console.log('made it here')
-    if (e) {
-        e.preventDefault()
-    }
-    if (navigator.clipboard) {
-        try {
-            const res = await navigator.clipboard.readText();
-            return console.log(res);
-        } catch (e_1) {
-            return console.log(e_1);
-        }
-    }
-} */
 
 function getClipboard() {
     var pasteTarget = document.createElement("div");
@@ -359,11 +345,6 @@ function getClipboard() {
     return paste;
 };
 
-function pasteFromClipboard() {
-    if (navigator.clipboard) {
-
-    }
-}
 
 function noteFromClipboard(e=null) {
     console.log('j')
