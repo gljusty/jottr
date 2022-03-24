@@ -49,7 +49,7 @@ body {
 }
 .collection-menu {
     display: block;
-    background: linear-gradient(180deg,rgb(1,1,1),#1b3553);
+    background: linear-gradient(360deg,rgb(1,1,1),#1b3553);
     border-radius: 8px;
     align-items: center;
     height: 7em;
