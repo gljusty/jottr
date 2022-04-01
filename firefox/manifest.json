@@ -9,7 +9,7 @@
     "48": "assets/img/arrow_bottom_down.png"
   },
   "browser_action": {
-    "default_popup": "bnotes.html"
+    "default_popup": "index.html"
   },
   "permissions": ["storage", "clipboardWrite", "clipboardRead"]
 }
