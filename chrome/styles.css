@@ -1,215 +1,204 @@
 html {
-    scrollbar-width: none;
-    margin: none;
-    padding: 0;
-    background: transparent 110%;
+  scrollbar-width: none;
+  margin: none;
+  padding: 0;
+  background: transparent 110%;
 }
 body {
-    font-size: 16px;
-    width: 400px;
-    border-radius: 8px;
-    /* background-color:#1b3553; */
-    background: linear-gradient(180deg,rgb(1,1,1),#1b3553);
-    background-clip: padding-box;
+  font-size: 16px;
+  width: 300px;
+  border-radius: 8px;
+  /* background-color:#1b3553; */
+  background: linear-gradient(180deg, rgb(1, 1, 1), #1b3553);
+  background-clip: padding-box;
 }
 #bcontainer {
-    display: flex;
-    border: none;
-    border-radius: 8px;
-    width: 100%;
-    padding-bottom: 5px;
-    justify-content: space-around;
-    float: right;
+  display: flex;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  padding-bottom: 5px;
+  justify-content: space-around;
+  float: right;
 }
 #ncontainer {
-    display: flexbox;
-    scrollbar-width: none;
-    height: max-content;
-    width: 100%;
-    padding-bottom: 0.5em;
+  display: flexbox;
+  scrollbar-width: none;
+  height: max-content;
+  width: 100%;
+  padding-bottom: 0.5em;
 }
 #note:last-child {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 #nstop {
-    display: hidden block;
-    height: 60px;
-    pointer-events: none;
+  display: hidden block;
+  height: 60px;
+  pointer-events: none;
 }
 .collection-menu-button-container {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0.5em 0em 0em;
-    width: 100%;
-    height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5em 0em 0em;
+  width: 100%;
+  height: 40px;
 }
-.collection-menu-button-container>*:not(.collection-text-input) {
-    color: rgb(9, 161, 207);
+.collection-menu-button-container > *:not(.collection-text-input) {
+  color: rgb(9, 161, 207);
 }
 .collection-menu {
-    display: block;
-    background: linear-gradient(270deg,rgb(1,1,1),#1b3553);
-    border-radius: 8px;
-    align-items: center;
-    height: 7em;
-    width: 100%; 
-    margin-bottom: 1em;
-    padding: 0;
-    overflow: scroll;
-    scrollbar-width: none;
-    transition:
-    height linear 250ms,
-    opacity ease-in-out 500ms;
-    box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);
+  display: block;
+  background: linear-gradient(270deg, rgb(1, 1, 1), #1b3553);
+  border-radius: 8px;
+  align-items: center;
+  height: 7em;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0;
+  overflow: scroll;
+  scrollbar-width: none;
+  transition: height linear 250ms, opacity ease-in-out 500ms;
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.75);
 }
 .collection-menu-button {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: #000000;
-    font-weight: normal;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
-    height: fit-content;
-    position: relative;
-    margin: auto;
-    background-color: rgba(25,25,25,0.0);
-    text-align: vertical center;
-    padding: 5px;
-    line-height: 18px;
-    color: whitesmoke;
-    border: solid 2px black;
-    border-radius: 8px;
-    transition: /* all linear 500ms; */
-    font-size ease-in-out 100ms,
-    border linear 100ms,
-    opacity ease-in-out 250ms,
-    width linear 500ms,
-    height linear 500ms,
-    background-color linear 250ms,
-    box-shadow linear 250ms,
-    padding cubic-bezier(0.165, 0.84, 0.44, 1) 500ms,
-    transform linear 250ms;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  height: fit-content;
+  position: relative;
+  margin: auto;
+  background-color: rgba(25, 25, 25, 0);
+  text-align: vertical center;
+  padding: 5px;
+  line-height: 18px;
+  color: whitesmoke;
+  border: solid 2px black;
+  border-radius: 8px;
+  transition: /* all linear 500ms; */ font-size ease-in-out 100ms,
+    border linear 100ms, opacity ease-in-out 250ms, width linear 500ms,
+    height linear 500ms, background-color linear 250ms, box-shadow linear 250ms,
+    padding cubic-bezier(0.165, 0.84, 0.44, 1) 500ms, transform linear 250ms;
 }
 .collection-menu-button:hover {
-    color: white;
-    background-color: rgba(25,25,25,1.0);
-    box-shadow: 0px 2px 2px -1px rgba(0,0,0,1);
+  color: white;
+  background-color: rgba(25, 25, 25, 1);
+  box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 1);
 }
 .collection-text-input {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: #000000;
-    font-weight: normal;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
-    border-radius: 8px;
-    width: 160px;
-    height: 14px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  border-radius: 8px;
+  width: 160px;
+  height: 14px;
 }
 .create-button {
-    height: 25px;
-    width: 40px;
-    color: rgb(9, 161, 207);
-    border: none;
-    border-radius: 8px;
-    background-color: rgba(25, 25, 25, 0.0);
-    transition: 
-    background-color linear 500ms,
-    transform ease-in-out 500ms;
+  height: 25px;
+  width: 40px;
+  color: rgb(9, 161, 207);
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(25, 25, 25, 0);
+  transition: background-color linear 500ms, transform ease-in-out 500ms;
 }
 .create-button:hover {
-    background-color: rgba(25, 25, 25, 1);
-    transform: scale(1.05);
+  background-color: rgba(25, 25, 25, 1);
+  transform: scale(1.05);
 }
 .create-button:active {
-    background-color: rgba(99,99,99,1);
-    transition: background-color linear 100ms;
+  background-color: rgba(99, 99, 99, 1);
+  transition: background-color linear 100ms;
 }
 .note {
-    position: relative;
-    height: 120px;
-    width: 100%;
-    opacity: 100%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    user-select: text;
-    transition:
-    opacity ease-in-out 250ms,
-    margin cubic-bezier(0.175, 0.885, 0.32, 1.275) 500ms, 
+  position: relative;
+  height: 120px;
+  width: 100%;
+  opacity: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  user-select: text;
+  transition: opacity ease-in-out 250ms,
+    margin cubic-bezier(0.175, 0.885, 0.32, 1.275) 500ms,
     transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 500ms;
 }
 .note-clip-button {
-    position: absolute;
-    margin-left: 83.5%;
-    margin-top: 2%;
-    z-index: inherit;
+  position: absolute;
+  margin-left: 83.5%;
+  margin-top: 2%;
+  z-index: inherit;
 }
-.note-clip-button>i {
-    opacity: 70%;
+.note-clip-button > i {
+  opacity: 70%;
 }
 .note-text {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-    color: #000000;
-    font-weight: normal;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
 
-    color: whitesmoke;
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.55);
-    text-align: left;
-    margin: auto;
-    padding: 0.5em;
-    overflow: hidden scroll;
-    scrollbar-width: none;
-    resize: none;
-    width: inherit;
-    height: inherit;
-    min-height: 85%;
-    max-height: 120%;
-    user-select: text;
-    transition: 
-    z-index linear 250ms,
-    box-shadow ease-in-out 250ms,
+  color: whitesmoke;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.55);
+  text-align: left;
+  margin: auto;
+  padding: 0.5em;
+  overflow: hidden scroll;
+  scrollbar-width: none;
+  resize: none;
+  width: inherit;
+  height: inherit;
+  min-height: 85%;
+  max-height: 120%;
+  user-select: text;
+  transition: z-index linear 250ms, box-shadow ease-in-out 250ms,
     height cubic-bezier(0.445, 0.05, 0.55, 0.95) 250ms,
     width cubic-bezier(0.445, 0.05, 0.55, 0.95) 250ms;
 }
 .note-text:focus {
-    resize: vertical;
+  resize: vertical;
 }
 .hidden {
-    opacity: 0;
+  opacity: 0;
 }
 .stacked {
-    margin: 0px 0px -30px 0px;
+  margin: 0px 0px -30px 0px;
 }
-.stacked:hover, .stacked:focus {
-    box-shadow: 1px 35px 25px -18px rgba(0,0,0,0.75);
-    z-index: 1000;
+.stacked:hover,
+.stacked:focus {
+  box-shadow: 1px 35px 25px -18px rgba(0, 0, 0, 0.75);
+  z-index: 1000;
 }
-.stacked>*:not(.note-clip-button):hover, .stacked>*:not(.note-clip-button):focus {
-    box-shadow: 1px 35px 25px -18px rgba(0,0,0,0.75);
-    z-index: 1000;
+.stacked > *:not(.note-clip-button):hover,
+.stacked > *:not(.note-clip-button):focus {
+  box-shadow: 1px 35px 25px -18px rgba(0, 0, 0, 0.75);
+  z-index: 1000;
 }
 .spread {
-    margin: 0px 0px -25px 0px;
-    transform: scale(0.5);
+  margin: 0px 0px -25px 0px;
+  transform: scale(0.5);
 }
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
