@@ -1,4 +1,4 @@
-# _Jottr
+# Jottr
 Firefox/Chrome add-on for Note-taking
 
 ### How To Use
