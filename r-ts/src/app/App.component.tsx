@@ -1,6 +1,6 @@
-import { MantineProvider } from "@mantine/core";
-import Layout from "../features/ui/layout/layout.component.";
-import "./App.css";
+import { MantineProvider, Button, Stack } from "@mantine/core";
+import Layout from "../features/layout/layout.component";
+import "./App.styles.css";
 
 function App() {
   return (
