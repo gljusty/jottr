@@ -1,21 +1,18 @@
 import { LayoutProps } from "./layout.types";
-import { Container, Grid, Button } from "@mantine/core";
-
-import JottrNote from "../notes/note.component";
+import { Container } from "@mantine/core";
+import { useEffect } from "react";
 
 const Layout: React.FC<Partial<LayoutProps>> = ({
   children,
   maxHeight,
   maxWidth,
 }: Partial<LayoutProps>) => {
+  useEffect(() => {
+    console.log(children);
+  }, []);
   return (
     <Container sx={{ maxHeight: maxHeight, maxWidth: maxWidth }}>
-      <Grid columns={12}>
-        <Grid.Col span={2}>
-          <JottrNote />
-        </Grid.Col>
-        <Grid.Col span={10}>{children}</Grid.Col>
-      </Grid>
+      {children}
     </Container>
   );
 };
