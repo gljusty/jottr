@@ -1,4 +1,5 @@
-import { config, DefaultConfig } from "../shared/config";
+import { config } from "../shared/config/config";
+import { DefaultConfig } from "../shared/config/config.types";
 import { useState, useEffect } from "react";
 
 const useConfig = <T extends Partial<DefaultConfig>>(

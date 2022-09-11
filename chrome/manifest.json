@@ -1,0 +1,12 @@
+{
+  "name": "Jottr",
+  "version": "0.1.0",
+  "description": "Note taking application extension",
+  "manifest_version": 3,
+  "author": "Bryan Stapleton",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Jottr"
+  },
+  "permissions": ["storage", "clipboardWrite", "clipboardRead"]
+}
