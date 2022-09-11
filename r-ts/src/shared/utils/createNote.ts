@@ -1,4 +1,7 @@
-import { JottrNote, JottrNoteProps } from "../features/notes/note/note.types";
+import {
+  JottrNote,
+  JottrNoteProps,
+} from "../../features/notes/note/note.types";
 
 export const createNote: Function = <JottrNote>(
   j?: JottrNoteProps
