@@ -1,0 +1,13 @@
+body {
+  height: 200px;
+  overflow: scroll;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

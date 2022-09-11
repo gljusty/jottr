@@ -129,7 +129,7 @@ function composeCollection(key, options = config) {
   }
 }
 
-function composeCollectionMenu(collection = null, options = config) {
+function composeCollectionMenu(options = config) {
   let container = document.createElement("div");
   let repr_container = document.createElement("div");
   let button_container = document.createElement("section");
@@ -149,8 +149,6 @@ function composeCollectionMenu(collection = null, options = config) {
     repr_container.style.display = "inline-flexbox";
     repr_container.style.width = "95%";
     repr_container.style.flexFlow = "row wrap";
-    /* repr_container.style.gridAutoColumns = 'auto auto'
-        repr_container.style.gridAutoFlow = 'row dense' */
     repr_container.style.marginLeft = ".5em";
     repr_container.style.marginRight = ".5em";
     repr_container.style.paddingLeft = "0.1em";
