@@ -2,15 +2,13 @@ import { Grid, MantineProvider } from "@mantine/core";
 import "./App.styles.css";
 import "animate.css";
 
-import JottrShell from "../features/layout/shell/shell.component";
-import JottrMenu from "../features/ui/menu/menu.component";
+import JottrShell from "../features/layout/shell/shell.component.js";
+//import JottrMenu from "../features/ui/menu/menu.component.js";
 
 function App() {
   return (
     <MantineProvider withGlobalStyles theme={{ colorScheme: "dark" }}>
-      <JottrShell>
-        <JottrMenu />
-      </JottrShell>
+      <JottrShell maxHeight={`200px`}>test</JottrShell>
     </MantineProvider>
   );
 }

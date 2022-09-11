@@ -1,4 +1,4 @@
-import { HeaderProps } from "./header.types";
+import { HeaderProps } from "./header.types.js";
 import { Header, ThemeIcon, Group, useMantineTheme } from "@mantine/core";
 import { TbCheck, TbBandage, TbBoxMultiple } from "react-icons/tb";
 
@@ -17,14 +17,14 @@ const JottrHeader: React.FC<Partial<HeaderProps>> = () => {
     >
       <Group position={"apart"} spacing={"sm"}>
         <ThemeIcon>
-          <TbBandage size={22} />
+          <TbBandage size={24} />
         </ThemeIcon>
         <Group position={"center"} spacing={"sm"}>
           <ThemeIcon>
-            <TbCheck size={22} />
+            <TbCheck size={24} />
           </ThemeIcon>
           <ThemeIcon>
-            <TbBoxMultiple size={22} />
+            <TbBoxMultiple size={24} />
           </ThemeIcon>
         </Group>
       </Group>
