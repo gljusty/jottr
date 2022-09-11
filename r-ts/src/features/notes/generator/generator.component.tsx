@@ -1,4 +1,4 @@
-import { JottrGeneratorProps } from "./note.types";
+import { JottrGeneratorProps } from "./generator.types";
 
 const JottrGenerator: React.FC<Partial<JottrGeneratorProps>> = () => {
   return <></>;

@@ -1,3 +1,3 @@
-const config = {};
+export const config: DefaultConfig = {};
 
-export default config;
+export interface DefaultConfig {}
