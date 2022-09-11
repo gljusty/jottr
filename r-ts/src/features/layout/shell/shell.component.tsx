@@ -1,7 +1,7 @@
 import { LayoutProps } from "./shell.types";
 import { AppShell, Container } from "@mantine/core";
 import { useEffect } from "react";
-import Nav from "../header/header";
+import JottrHeader from "../header/header";
 
 const JottrShell: React.FC<Partial<LayoutProps>> = ({
   theme,
@@ -9,7 +9,7 @@ const JottrShell: React.FC<Partial<LayoutProps>> = ({
   maxHeight,
   maxWidth,
 }: Partial<LayoutProps>) => {
-  return <AppShell header={<Nav />}>{children}</AppShell>;
+  return <AppShell header={<JottrHeader />}>{children}</AppShell>;
 };
 
 export default JottrShell;

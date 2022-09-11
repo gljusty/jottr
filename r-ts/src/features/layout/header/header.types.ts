@@ -1,1 +1,1 @@
-export interface JottrNavbarProps {}
+export interface HeaderProps {}

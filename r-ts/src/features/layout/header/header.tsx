@@ -1,8 +1,8 @@
-import { JottrNavbarProps } from "./header.types";
+import { HeaderProps } from "./header.types";
 import { Header, ThemeIcon, Group, useMantineTheme } from "@mantine/core";
 import { TbCheck, TbBandage, TbBoxMultiple } from "react-icons/tb";
 
-const Nav: React.FC<Partial<JottrNavbarProps>> = () => {
+const JottrHeader: React.FC<Partial<HeaderProps>> = () => {
   const theme = useMantineTheme();
   return (
     <Header
@@ -32,4 +32,4 @@ const Nav: React.FC<Partial<JottrNavbarProps>> = () => {
   );
 };
 
-export default Nav;
+export default JottrHeader;
