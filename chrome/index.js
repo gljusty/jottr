@@ -208,6 +208,7 @@ function composeCollectionMenu(options = config) {
             return Math.random() * (max - min) + min;
           }
 
+          //animation
           if (text.indexOf(input) < 0) {
             tar.style.color = "rgba(0,0,0, 0.25)";
             tar.style.fontSize = "4px";
