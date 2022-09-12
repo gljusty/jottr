@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const useConfig = <T extends Partial<DefaultConfig>>(
   _?: T
-): T | DefaultConfig => {
+): T | Partial<DefaultConfig> => {
   const [c, setC] = useState<T | Partial<DefaultConfig>>(_ || config);
 
   useEffect(() => {
