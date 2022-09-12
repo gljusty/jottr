@@ -1,8 +1,14 @@
 import { JottrNoteProps } from "./note.types.js";
-import { Paper } from "@mantine/core";
+import { Paper, Textarea } from "@mantine/core";
 
-const JottrNote: React.FC<Partial<JottrNoteProps>> = () => {
-  return <Paper>test123</Paper>;
+const JottrNote: React.FC<
+  Partial<JottrNoteProps>
+> = ({}: Partial<JottrNoteProps>) => {
+  return (
+    <Paper>
+      <Textarea />
+    </Paper>
+  );
 };
 
 export default JottrNote;
