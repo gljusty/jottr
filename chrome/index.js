@@ -9,10 +9,8 @@ const clipboard_button = document.getElementById("gbutton");
 const clear_button = document.getElementById("hbutton");
 const config = {
   color_palette: [
-    // corresponds to r, g, b values; implement colors as rgb(i[0], i[1], i[2])
     [25, 35, 40],
     [15, 76, 117],
-    //[50,130,184]
   ],
   limit: 10,
   timeout: 300,
@@ -296,8 +294,8 @@ function composeNote(text = null, options = config) {
   let note_clipboard_button = document.createElement("button");
   let clipboard_button_icon = document.createElement("i");
   let ncn = document.getElementsByClassName("note").length;
-  let ncd = options.color_palette.length;
-  let nnc = ncn % ncd;
+  let ncd = 1;
+  let nnc = ncn % ncd++;
   let c = options.color_palette[nnc];
 
   note.classList.add("note");
