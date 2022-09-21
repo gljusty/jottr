@@ -10,7 +10,7 @@ const useConfig = <T extends Partial<DefaultConfig>>(
   useEffect(() => {
     setC(_!);
   }, [_]);
-  return [c];
+  return c;
 };
 
 export default useConfig;

@@ -8,10 +8,7 @@ const archive_button = document.getElementById("jbutton");
 const clipboard_button = document.getElementById("gbutton");
 const clear_button = document.getElementById("hbutton");
 const config = {
-  color_palette: [
-    [25, 35, 40],
-    [15, 76, 117],
-  ],
+  color_palette: [25, 35, 40],
   limit: 10,
   timeout: 300,
   allow_duplicates: false,
@@ -288,15 +285,12 @@ function composeCollectionMenu(options = config) {
   }
 }
 
-function composeNote(text = null, options = config) {
+function composeNote(text = null) {
   let note = document.createElement("div");
   let note_text = document.createElement("textarea");
   let note_clipboard_button = document.createElement("button");
   let clipboard_button_icon = document.createElement("i");
   let ncn = document.getElementsByClassName("note").length;
-  let ncd = 1;
-  let nnc = ncn % ncd++;
-  let c = options.color_palette[nnc];
 
   note.classList.add("note");
   note.classList.add("stacked");
@@ -309,7 +303,7 @@ function composeNote(text = null, options = config) {
   note_text.classList.add("note-text");
   note_text.setAttribute("tabIndex", 1);
   note_text.placeholder = "Enter text";
-  note_text.style.backgroundColor = `rgb(${c[0]},${c[1]},${c[2]})`;
+  note_text.style.backgroundColor = `rgb(${config.color_palette[0]},${config.color_palette[1]},${config.color_palette[2]})`;
 
   if (text != null) {
     note_text.value = text;
