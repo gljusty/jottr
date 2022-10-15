@@ -15,9 +15,11 @@ const JottrShell: React.FC<Partial<LayoutProps>> = ({
   children,
 }: Partial<LayoutProps>) => {
   const theme = useMantineTheme();
+
   useEffect(() => {
     console.log(theme);
   }, []);
+
   return (
     <AppShell header={<JottrHeader />}>
       {children}

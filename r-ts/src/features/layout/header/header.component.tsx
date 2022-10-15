@@ -8,7 +8,7 @@ import {
 } from "@mantine/core";
 import { TbCheck, TbBallon, TbBoxMultiple } from "react-icons/tb";
 
-const JottrHeader: React.FC<Partial<HeaderProps>> = () => {
+const JottrHeader = <T extends Partial<HeaderProps>>({}: T) => {
   const theme = useMantineTheme();
   return (
     <Header
