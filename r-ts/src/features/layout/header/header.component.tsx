@@ -22,7 +22,10 @@ const JottrHeader: React.FC<Partial<HeaderProps>> = () => {
       height={60}
     >
       <Group position={"apart"} spacing={"sm"}>
-        <TbBallon size={24} />
+        <Group position={"center"} spacing={"xs"}>
+          #Brand
+          <TbBallon size={24} />
+        </Group>
         <Group position={"center"} spacing={"sm"}>
           <ThemeIcon>
             <TbCheck size={24} />

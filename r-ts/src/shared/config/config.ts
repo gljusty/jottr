@@ -1,3 +1,3 @@
 import { DefaultConfig } from "./config.types";
 
-export const config: DefaultConfig = {};
+export const config: Partial<DefaultConfig> = {};
