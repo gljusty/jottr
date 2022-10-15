@@ -1,3 +1,8 @@
-export interface AuthProps {}
+export interface AuthProps {
+  apiKey: string;
+  token: string;
+}
 
-export interface User {}
+export interface User {
+  username: string;
+}
