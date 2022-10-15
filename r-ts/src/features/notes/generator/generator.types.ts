@@ -1,1 +1,3 @@
-export interface JottrGeneratorProps {}
+export interface JGeneratorProps {
+  limit: number;
+}

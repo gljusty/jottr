@@ -6,7 +6,7 @@ import JottrShell from "../features/layout/shell/shell.component.js";
 function App() {
   return (
     <MantineProvider withGlobalStyles theme={{ colorScheme: "dark" }}>
-      <JottrShell></JottrShell>
+      <JottrShell />
     </MantineProvider>
   );
 }

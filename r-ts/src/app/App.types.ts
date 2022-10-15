@@ -1,3 +1,3 @@
-export interface AppStateProps {}
+export interface InitialState {}
 
 export interface AppState {}
