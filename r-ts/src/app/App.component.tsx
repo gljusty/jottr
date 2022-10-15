@@ -1,9 +1,10 @@
-import { Button, Grid, MantineProvider, Stack } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
+import { InitialState } from "./App.types";
+import { useState } from "react";
+import JottrShell from "../features/layout/shell/shell.component.js";
 import "./App.styles.css";
 
-import JottrShell from "../features/layout/shell/shell.component.js";
-
-function App() {
+function App({}: Partial<InitialState>) {
   return (
     <MantineProvider withGlobalStyles theme={{ colorScheme: "dark" }}>
       <JottrShell />
