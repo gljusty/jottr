@@ -2,4 +2,4 @@ export interface NoteProps {
   text: string;
 }
 
-export interface JottrNote {}
+export interface JNote {}
