@@ -6,7 +6,6 @@ html {
 }
 body {
   font-size: 16px;
-  width: 300px;
   border-radius: 8px;
   /* background-color:#1b3553; */
   background: linear-gradient(180deg, rgb(1, 1, 1), #1b3553);
@@ -25,7 +24,6 @@ body {
   display: flexbox;
   scrollbar-width: none;
   height: max-content;
-  width: 100%;
   padding-bottom: 0.5em;
 }
 #note:last-child {

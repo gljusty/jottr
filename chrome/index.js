@@ -8,12 +8,7 @@ const archive_button = document.getElementById("jbutton");
 const clipboard_button = document.getElementById("gbutton");
 const clear_button = document.getElementById("hbutton");
 const config = {
-  color_palette: [
-    // corresponds to r, g, b values; implement colors as rgb(i[0], i[1], i[2])
-    [25, 35, 40],
-    [15, 76, 117],
-    //[50,130,184]
-  ],
+  color_palette: [25, 35, 40],
   limit: 10,
   timeout: 300,
   allow_duplicates: false,
@@ -129,7 +124,7 @@ function composeCollection(key, options = config) {
   }
 }
 
-function composeCollectionMenu(collection = null, options = config) {
+function composeCollectionMenu(options = config) {
   let container = document.createElement("div");
   let repr_container = document.createElement("div");
   let button_container = document.createElement("section");
@@ -149,8 +144,6 @@ function composeCollectionMenu(collection = null, options = config) {
     repr_container.style.display = "inline-flexbox";
     repr_container.style.width = "95%";
     repr_container.style.flexFlow = "row wrap";
-    /* repr_container.style.gridAutoColumns = 'auto auto'
-        repr_container.style.gridAutoFlow = 'row dense' */
     repr_container.style.marginLeft = ".5em";
     repr_container.style.marginRight = ".5em";
     repr_container.style.paddingLeft = "0.1em";
@@ -210,6 +203,7 @@ function composeCollectionMenu(collection = null, options = config) {
             return Math.random() * (max - min) + min;
           }
 
+          //animation
           if (text.indexOf(input) < 0) {
             tar.style.color = "rgba(0,0,0, 0.25)";
             tar.style.fontSize = "4px";
@@ -291,15 +285,12 @@ function composeCollectionMenu(collection = null, options = config) {
   }
 }
 
-function composeNote(text = null, options = config) {
+function composeNote(text = null) {
   let note = document.createElement("div");
   let note_text = document.createElement("textarea");
   let note_clipboard_button = document.createElement("button");
   let clipboard_button_icon = document.createElement("i");
   let ncn = document.getElementsByClassName("note").length;
-  let ncd = options.color_palette.length;
-  let nnc = ncn % ncd;
-  let c = options.color_palette[nnc];
 
   note.classList.add("note");
   note.classList.add("stacked");
@@ -312,7 +303,7 @@ function composeNote(text = null, options = config) {
   note_text.classList.add("note-text");
   note_text.setAttribute("tabIndex", 1);
   note_text.placeholder = "Enter text";
-  note_text.style.backgroundColor = `rgb(${c[0]},${c[1]},${c[2]})`;
+  note_text.style.backgroundColor = `rgb(${config.color_palette[0]},${config.color_palette[1]},${config.color_palette[2]})`;
 
   if (text != null) {
     note_text.value = text;

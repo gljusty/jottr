@@ -1,0 +1,4 @@
+.mantine-AppShell-body {
+  min-height: 500px;
+  max-height: inherit;
+}
