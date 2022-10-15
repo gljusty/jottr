@@ -1,9 +1,7 @@
-import { JottrNoteProps } from "./note.types.js";
+import { NoteProps } from "./note.types.js";
 import { Paper, Textarea } from "@mantine/core";
 
-const JottrNote: React.FC<
-  Partial<JottrNoteProps>
-> = ({}: Partial<JottrNoteProps>) => {
+const JottrNote: React.FC<Partial<NoteProps>> = ({}: Partial<NoteProps>) => {
   return (
     <Paper>
       <Textarea />

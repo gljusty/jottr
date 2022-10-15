@@ -1,3 +1,3 @@
-export interface JottrNoteProps {}
+export interface NoteProps {}
 
-export interface JottrNote {}
+export interface JottrNote<NoteProps> {}
